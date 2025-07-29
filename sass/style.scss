@@ -1,3 +1,4 @@
+@import "./utils/mixins";
 @import "./utils/placeholders";
 @import "./utils/variables";
 @import "./components/about_us";
@@ -9,3 +10,8 @@
 @import "./components/reviews";
 @import "./components/team";
 @import "./components/footer.scss";
+.container {
+    max-width: 1258px;
+    margin: 0 16px;
+    padding: 0 auto;
+}

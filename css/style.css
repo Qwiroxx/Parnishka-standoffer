@@ -1,1 +1,70 @@
-/*# sourceMappingURL=style.css.map */
+.nav__item-link {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav__item {
+  padding: 4px 8px;
+}
+.nav__item:hover {
+  background: linear-gradient(rgba(248, 110, 103, 0.63), rgba(253, 86, 143, 0.86));
+  padding: 4px 8px;
+}
+.nav__item-link {
+  color: #3C322D;
+}
+.nav__item-link:hover {
+  color: #F6F7F7;
+}
+
+.header {
+  display: flex;
+  gap: 3vw;
+  padding-top: 36px;
+}
+
+@media (max-width: 954px) {
+  .nav {
+    gap: 0px;
+  }
+  .nav__item {
+    padding: 4px 6px;
+  }
+}
+@media (max-width: 704px) {
+  .nav {
+    display: none;
+  }
+}
+.hero-title {
+  font-family: "Montserrat Alternates";
+  font-weight: 600;
+  line-height: 65px;
+  letter-spacing: 0%;
+  font-size: 30px;
+}
+@media only screen and (min-width: 375px) {
+  .hero-title {
+    font-size: calc(30px + 30 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .hero-title {
+    font-size: 60px;
+  }
+}
+
+.container {
+  max-width: 1258px;
+  margin: 0 16px;
+  padding: 0 auto;
+}/*# sourceMappingURL=style.css.map */

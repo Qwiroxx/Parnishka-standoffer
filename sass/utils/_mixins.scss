@@ -1,0 +1,13 @@
+@mixin fluid-type($font-min, $font-max) {
+  font-size: #{$font-min}px;
+
+  @media only screen and (min-width: 375px) {
+    font-size: calc(
+      #{$font-min}px + #{($font-max - $font-min)} * (100vw - 375px) / (1920 - 375)
+    );
+  }
+
+  @media only screen and (min-width: 1920px) {
+    font-size: #{$font-max}px;
+  }
+}

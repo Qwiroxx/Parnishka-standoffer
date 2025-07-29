@@ -1,5 +1,42 @@
-@import "./utils/variables";
 .nav {
     display: flex;
     gap: 20px;
+    align-items: center;
+
+    &__item {
+        padding: 4px 8px;
+    }
+
+    &__item:hover {
+        background: linear-gradient($hover-bg-top, $hover-bg-bottom);
+        padding: 4px 8px;
+    }
+
+    &__item-link {
+        @extend %small-text;
+        color: $primary-text-color;
+
+        &:hover {
+            color: $secondary-text-color;
+        }
+    }
+}
+.header {
+    display: flex;
+    gap: 3vw;
+    padding-top: 36px;
+}
+@media (max-width: 954px) {
+    .nav {
+        gap: 0px;
+
+        &__item {
+        padding: 4px 6px;
+    }
+    }
+}
+@media (max-width: 704px) {
+    .nav {
+        display: none;
+    }
 }
