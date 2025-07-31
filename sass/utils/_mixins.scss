@@ -11,3 +11,12 @@
     font-size: #{$font-max}px;
   }
 }
+@mixin h2-title ($font-size) {
+    font-family: 'Montserrat Alternates';
+    font-weight: 500;
+    font-style: Medium;
+    font-size: $font-size;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
