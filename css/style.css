@@ -6,6 +6,42 @@
   letter-spacing: 0%;
 }
 
+.about_us {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background-color: #E5E2E3;
+}
+
+.about_us-title {
+  font-family: Montserrat Alternates;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 32px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #3C322D;
+}
+
+.about_us-info {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #3C322D;
+  width: 600px;
+}
+
+.about_us-text {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .body-wrapper {
   overflow: hidden;
   width: 100%;
