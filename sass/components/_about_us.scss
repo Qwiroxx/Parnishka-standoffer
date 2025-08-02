@@ -8,13 +8,9 @@
 }
 .about_us-title
 {
-    font-family: Montserrat Alternates;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 32px;
-    leading-trim: NONE;
-    line-height: 100%;
-    letter-spacing: 0%;
+    @include fluid-type(24, 32);
+    @extend %second-title;
+    text-align: start;
     color: $primary-text-color;
 }
 .about_us-info

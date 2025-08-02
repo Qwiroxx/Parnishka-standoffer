@@ -6,7 +6,11 @@
   letter-spacing: 0%;
 }
 
+<<<<<<< HEAD
 .speakers__title {
+=======
+.about_us-title {
+>>>>>>> a53d4a033347c936c3145623522a10852b57c595
   font-family: "Montserrat Alternates";
   font-weight: 500;
   font-style: Medium;
@@ -15,6 +19,7 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .team__item-name {
   font-family: "Montserrat";
   font-weight: 600;
@@ -33,6 +38,8 @@
   text-align: center;
 }
 
+=======
+>>>>>>> a53d4a033347c936c3145623522a10852b57c595
 .about_us {
   display: flex;
   align-items: center;
@@ -41,14 +48,19 @@
 }
 
 .about_us-title {
-  font-family: Montserrat Alternates;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 32px;
-  leading-trim: NONE;
-  line-height: 100%;
-  letter-spacing: 0%;
+  font-size: 24px;
+  text-align: start;
   color: #3C322D;
+}
+@media only screen and (min-width: 375px) {
+  .about_us-title {
+    font-size: calc(24px + 8 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .about_us-title {
+    font-size: 32px;
+  }
 }
 
 .about_us-info {
