@@ -6,6 +6,33 @@
   letter-spacing: 0%;
 }
 
+.speakers__title {
+  font-family: "Montserrat Alternates";
+  font-weight: 500;
+  font-style: Medium;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.team__item-name {
+  font-family: "Montserrat";
+  font-weight: 600;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.team__item-text {
+  font-family: "Montserrat";
+  font-weight: 500;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
 .about_us {
   display: flex;
   align-items: center;
@@ -60,12 +87,14 @@
 .nav__item:hover {
   background: linear-gradient(rgba(248, 110, 103, 0.63), rgba(253, 86, 143, 0.86));
   padding: 4px 8px;
+  color: #F6F7F7;
+  box-shadow: 0px 7px 27px -2px rgba(253, 88, 140, 0.35);
+}
+.nav__item:hover .nav__item-link {
+  color: #F6F7F7;
 }
 .nav__item-link {
   color: #3C322D;
-}
-.nav__item-link:hover {
-  color: #F6F7F7;
 }
 
 .header__burger-btn {
@@ -141,6 +170,7 @@
     gap: 60px;
     text-align: center;
     padding-top: 140px;
+    padding-bottom: clamp(52px, 30vw, 290px);
   }
   .nav__item {
     padding: 10px 28px;
@@ -204,8 +234,110 @@
   }
 }
 
+.speakers .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.speakers {
+  text-align: center;
+}
+
+.speakers__title {
+  font-size: 32px;
+  padding-top: clamp(0px, 0px + 24 * (100vw - 320px) / 448, 24px);
+  text-align: center;
+}
+
+.team {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+.team__item {
+  width: clamp(130px, 19.8vw, 288px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team__item-photo {
+  width: clamp(130px, 19.8vw, 288px);
+  height: clamp(141px, 21vw, 305px);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.team__item-name {
+  font-size: 18px;
+  padding: 20px 0px;
+}
+.team__item-text {
+  font-size: 12px;
+  width: clamp(130px, 19.8vw, 181px);
+}
+@media only screen and (min-width: 375px) {
+  .team__item-text {
+    font-size: calc(12px + 4 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .team__item-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team {
+    gap: clamp(20px, 20px + 12 * (100vw - 320px) / 448, 32px);
+  }
+  .team__item-name {
+    font-size: 16px;
+    padding: clamp(12px, 12px + 8 * (100vw - 320px) / 448, 20px) 0;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+  .team__item-name {
+    font-size: calc(16px + 2 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 1920px) {
+  .team__item-name {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .speakers__title {
+    font-size: 24px;
+    padding-bottom: clamp(16px, 16px + 4 * (100vw - 320px) / 448, 20px);
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+  .speakers__title {
+    font-size: calc(24px + 8 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 1920px) {
+  .speakers__title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 660px) {
+  .team {
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 768px) {
+  .speakers__title {
+    padding-top: clamp(24px, 24px + 76 * (100vw - 768px) / 1152, 100px);
+  }
+}
 .container {
   max-width: 1258px;
-  margin: 0 16px;
-  padding: 0 auto;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
 }/*# sourceMappingURL=style.css.map */
