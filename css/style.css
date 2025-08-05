@@ -1,4 +1,4 @@
-.nav__item-link {
+.hero-button, .nav__item-link {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
@@ -6,11 +6,7 @@
   letter-spacing: 0%;
 }
 
-<<<<<<< HEAD
-.speakers__title {
-=======
-.about_us-title {
->>>>>>> a53d4a033347c936c3145623522a10852b57c595
+.speakers__title, .about_us-title {
   font-family: "Montserrat Alternates";
   font-weight: 500;
   font-style: Medium;
@@ -19,27 +15,22 @@
   text-align: center;
 }
 
-<<<<<<< HEAD
 .team__item-name {
   font-family: "Montserrat";
   font-weight: 600;
-  leading-trim: NONE;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
 }
 
-.team__item-text {
+.team__item-text, .hero-author {
   font-family: "Montserrat";
   font-weight: 500;
-  leading-trim: NONE;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
 }
 
-=======
->>>>>>> a53d4a033347c936c3145623522a10852b57c595
 .about_us {
   display: flex;
   align-items: center;
@@ -233,11 +224,12 @@
   font-weight: 600;
   line-height: 65px;
   letter-spacing: 0%;
-  font-size: 30px;
+  font-size: 28px;
+  max-width: 757px;
 }
 @media only screen and (min-width: 375px) {
   .hero-title {
-    font-size: calc(30px + 30 * (100vw - 375px) / 1545);
+    font-size: calc(28px + 32 * (100vw - 375px) / 1545);
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -246,6 +238,74 @@
   }
 }
 
+.hero__list-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+}
+
+.hero-author {
+  font-size: 16px;
+  text-align: left;
+  font-family: "Montserrat Alternates";
+  padding-top: calc(10px + 10 * (100vw - 768px) / 1152);
+  padding-bottom: calc(24px + 4 * (100vw - 768px) / 1152);
+}
+@media only screen and (min-width: 375px) {
+  .hero-author {
+    font-size: calc(16px + 8 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .hero-author {
+    font-size: 24px;
+  }
+}
+
+.hero-button {
+  background-color: rgb(243, 132, 140);
+  padding: 8px 30px 9px 31px;
+  border-radius: 50px;
+  color: #F6F7F7;
+}
+
+.hero-button {
+  margin-bottom: calc(20px + 12 * (100vw - 768px) / 1152);
+  max-width: 145px;
+}
+
+.hero {
+  padding-bottom: calc(43px + 47 * (100vw - 768px) / 1152);
+  display: flex;
+  flex-direction: column;
+  padding-top: calc(20px + 45 * (100vw - 320px) / 1600);
+}
+
+@media (max-width: 768px) {
+  .hero-button {
+    padding: clamp(8px, 2vw, 9px) clamp(30px, 5vw, 35px) clamp(9px, 2vw, 9px) clamp(31px, 5vw, 35px);
+  }
+  .hero-author {
+    padding-top: calc(18px + -8 * (100vw - 320px) / 448);
+    padding-bottom: calc(28px + -4 * (100vw - 320px) / 448);
+  }
+  .hero {
+    padding-bottom: calc(8px + 35 * (100vw - 320px) / 448);
+  }
+  .hero-button {
+    margin-bottom: calc(28px + -8 * (100vw - 320px) / 448);
+  }
+}
+@media (max-width: 320px) {
+  .hero {
+    align-items: center;
+  }
+  .hero-title {
+    text-align: center;
+    letter-spacing: -3%;
+    line-height: 100%;
+  }
+}
 .speakers .container {
   display: flex;
   flex-direction: column;

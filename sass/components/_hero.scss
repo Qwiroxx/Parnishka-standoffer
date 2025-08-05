@@ -4,5 +4,66 @@
     font-weight: 600;
     line-height: 65px;
     letter-spacing: 0%;
-    @include fluid-type(30, 60);
+    @include fluid-type(28, 60);
+    max-width: 757px;
+}
+.hero__list-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+}
+.hero-author {
+    @extend %paragraph-text;
+    @include fluid-type(16, 24); 
+    text-align: left;
+    font-family: 'Montserrat Alternates';
+    padding-top: calc(10px + (20 - 10) * ((100vw - 768px) / (1920 - 768)));
+    padding-bottom: calc(24px + (28 - 24) * ((100vw - 768px) / (1920 - 768)));
+}
+.hero-button {
+    @extend %small-text; 
+    background-color: $hero-btn-bg;
+    padding: 8px 30px 9px 31px;
+    border-radius: 50px;
+    color: $secondary-text-color;
+}
+.hero-button {
+    margin-bottom: calc(20px + (32 - 20) * ((100vw - 768px) / (1920 - 768)));
+    max-width: 145px;
+}
+.hero {
+    padding-bottom: calc(43px + (90 - 43) * ((100vw - 768px) / (1920 - 768)));
+    display: flex;
+    flex-direction: column;
+    padding-top: calc(20px + (65 - 20) * ((100vw - 320px) / (1920 - 320)));
+}
+@media (max-width: 768px) {
+    .hero-button {
+        padding: 
+        clamp(8px, 2vw, 9px) 
+        clamp(30px, 5vw, 35px) 
+        clamp(9px, 2vw, 9px) 
+        clamp(31px, 5vw, 35px); 
+    }
+    .hero-author {
+        padding-top: calc(18px + (10 - 18) * ((100vw - 320px) / (768 - 320)));
+        padding-bottom: calc(28px + (24 - 28) * ((100vw - 320px) / (768 - 320)));
+    }
+    .hero {
+        padding-bottom: calc(8px + (43 - 8) * ((100vw - 320px) / (768 - 320)));
+    }
+    .hero-button {
+        margin-bottom: calc(28px + (20 - 28) * ((100vw - 320px) / (768 - 320)));
+    }
+}
+@media (max-width: 320px) {
+    .hero {
+        align-items: center;
+
+        &-title {
+            text-align: center;
+            letter-spacing: -3%;
+            line-height: 100%;
+        }
+    }
 }
