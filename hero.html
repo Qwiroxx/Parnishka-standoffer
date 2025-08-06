@@ -15,7 +15,7 @@
         <div class="hero">
             <h1 class="hero-title">Donut Masterclass with the Donut King</h1>
             <h3 class="hero-author">Hosted by Eva Green</h3>
-            <button class="hero-button">Register</button>
+            <button class="hero-button" id="open-modal-btn">Register</button>
             <div hero__list>
                 <svg class="hero__list-icon" tabindex="0">
                     <use href="./img/symbol-defts.svg#twitter-icon"></use>
@@ -30,11 +30,22 @@
         </div>
     </div>
 
-    <div class="modal">
+    <div class="modal" id="my-modal">
         <div class="modal__box">
-            <h2>Donut</h2>
+            <button class="modal__close-btn" id="close-my-modal-btn">
+                <svg class="modal__close-svg">
+                    <use href="./img/symbol-defts.svg#icon-cross"></use>
+                </svg>
+            </button>
+            <h2>Apply your personal info for registration </h2>
+            <div class="info">
+                <input type="text">
+                <input type="number">
+                <input type="email">
+            </div>
             <p>Lorem ipsum dolor sit.</p>
         </div>
     </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

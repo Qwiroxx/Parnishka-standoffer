@@ -105,6 +105,7 @@
     overflow-y: auto;
     visibility: hidden;
     opacity: 0;
+    transition: opacity 0.4s, visibility 0.4s;
 }
 .modal__box {
     max-width: 500px;
@@ -113,4 +114,39 @@
     margin: 30px 15px;
     background-color: $secondary-text-color;
     box-shadow: 15px 15px 25px 3px $hero-btn-shadow;
+    transform: scale(0);
+    transition: transform 0.8s;
+    background-image: url(/img/hero/modal-bg.png);
+    background-repeat: no-repeat;
+}
+.modal__box::before {
+    content: "";
+    background-image: url(/img/hero/modal-bg-white.png);
+}
+.info {
+    display: flex;
+    flex-direction: column;
+}
+.info input {
+    max-width: 200px;
+}
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+.modal.open .modal__box {
+    transform: scale(1);
+}
+.modal__close-btn {
+    position: absolute;
+    top: 8px;
+    left: 220px;
+}
+.modal__close-svg {
+    width: 12px;
+    height: 12px;
+    transition: color 0.4s;
+}
+.modal__close-svg:hover {
+    color: $hero-btn-bg;
 }
