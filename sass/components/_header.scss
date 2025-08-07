@@ -78,7 +78,9 @@
     padding-top: 36px;
 
 }
-
+.circle-wrap {
+    display: none;
+}
 @media (max-width: 954px) {
     .nav {
         gap: 0px;
@@ -102,7 +104,7 @@
     }
     .nav {
         flex-direction: column;
-        gap: 60px;
+        gap: clamp(40px, 5vw, 60px);
         text-align: center;
         padding-top: 140px;
         padding-bottom: clamp(52px, 30vw, 290px);
@@ -137,8 +139,41 @@
         font-family: 'Montserrat Alternates';
         font-weight: 500;
     }
+    .circle-wrap {
+        display: flex;
+        position: relative;
+    }
+    .burger-circle {
+        z-index: 5;
+        position: absolute;
+    }
+    .one {
+        left: -330px;
+        top: -100px;
+    }
+    .two {
+        left: 285px;
+        top: -280px;
+    }
+    .three {
+        left: -110px;
+        top: -640px;
+    }
+    .four {
+        left: 250px;
+        top: 85px;
+    }
+    .five {
+        left: -100px;
+        top: -275px;
+    }
+    .six {
+        left: 60px;
+        top: -35px;
+    }
 }
 .header__logo {
      width: clamp(106px, 20vw, 158px);
      height: clamp(46.25px, 9vw, 70px);
 }
+

@@ -79,6 +79,11 @@
     .hero-button {
         margin-bottom: calc(28px + (20 - 28) * ((100vw - 320px) / (768 - 320)));
     }
+    .hero-title {
+        max-width: 385px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
 }
 @media (max-width: 320px) {
     .hero {
@@ -108,8 +113,7 @@
     transition: opacity 0.4s, visibility 0.4s;
 }
 .modal__box {
-    max-width: 500px;
-    padding: 45px;
+    padding: 20px;
     z-index: 1;
     margin: 30px 15px;
     background-color: $secondary-text-color;
@@ -118,17 +122,35 @@
     transition: transform 0.8s;
     background-image: url(/img/hero/modal-bg.png);
     background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
 }
 .modal__box::before {
     content: "";
     background-image: url(/img/hero/modal-bg-white.png);
+    z-index: -1;
+    position: absolute;
+    width: 80%; 
+    height: 100%; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0px;
+    left: 0px;
 }
 .info {
     display: flex;
     flex-direction: column;
-}
-.info input {
-    max-width: 200px;
+    padding-top: 24px;
+
+    &__field {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $hero-border-modal;
+        @extend %small-text;
+        font-size: 16px;
+        color: $hero-border-modal;
+        max-width: 190px;
+    }
 }
 .modal.open {
     visibility: visible;
@@ -139,14 +161,51 @@
 }
 .modal__close-btn {
     position: absolute;
-    top: 8px;
-    left: 220px;
+    top: 20px;
+    left: 90%;
 }
 .modal__close-svg {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     transition: color 0.4s;
 }
 .modal__close-svg:hover {
     color: $hero-btn-bg;
+}
+.modal__box-title {
+    @extend %paragraph-text;
+    @include fluid-type(16,20);
+    max-width: 70%;
+    padding-top: 30px;
+}
+.modal-button {
+    margin: 30px;
+    @extend %small-text; 
+    background-color: $hero-btn-bg;
+    padding: 8px 30px 9px 31px;
+    border-radius: 25px;
+    color: $secondary-text-color;
+    box-shadow: 10px 15px 25px 0px $hero-btn-shadow;
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid $hero-btn-bg;
+        background-color: $secondary-text-color;
+        color: $hero-btn-bg;   
+    }
+
+    &:focus {
+        background-color: $hero-btn-bg;
+        color: $secondary-text-color;
+        border: 1px solid transparent;
+        box-shadow: 10px 15px 25px 0px $hero-btn-shadow, inset 0px 4px 4px 0px $hero-inner-btn-shadow;
+    }
+}
+@media (min-width: 350px) {
+    .modal__box-title {
+        text-align: left;
+    }
+    .modal-button {
+        margin-left: 0px;
+    }
 }
