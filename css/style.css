@@ -1,4 +1,4 @@
-.modal-button, .info__field, .hero-button, .nav__item-link {
+.modal-button, .info__field, .hero-button, .nav__item-link, .about_us-info {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
@@ -35,7 +35,6 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  background-color: #E5E2E3;
 }
 
 .about_us-title {
@@ -54,15 +53,25 @@
   }
 }
 
+.about_us-img {
+  width: clamp(280px, 50vw, 608px);
+  height: clamp(285px, 50vh, 381px);
+}
+
 .about_us-info {
-  font-family: Montserrat;
-  font-weight: 400;
   font-style: Regular;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  font-size: 16px;
   color: #3C322D;
-  width: 600px;
+}
+@media only screen and (min-width: 375px) {
+  .about_us-info {
+    font-size: calc(16px + 2 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .about_us-info {
+    font-size: 18px;
+  }
 }
 
 .about_us-text {
@@ -72,6 +81,51 @@
   gap: 30px;
 }
 
+.about_us-bg {
+  background-color: #E5E2E3;
+}
+
+.about_us-item {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.about_us-more {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .about_us-more {
+    cursor: pointer;
+    display: block;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #3C322D;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 375px) {
+  .about_us-more {
+    font-size: calc(16px + 2 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 1920px) {
+  .about_us-more {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .about_us-info {
+    width: 360px;
+  }
+  .about_us {
+    flex-direction: column;
+  }
+}
 .body-wrapper {
   overflow: hidden;
   width: 100%;

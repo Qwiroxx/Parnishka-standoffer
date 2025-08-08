@@ -1,10 +1,10 @@
 @import "../utils/variables";
+
 .about_us
 {
     display: flex;
     align-items: center;
     gap: 32px;
-    background-color: #E5E2E3;
 }
 .about_us-title
 {
@@ -13,16 +13,17 @@
     text-align: start;
     color: $primary-text-color;
 }
+.about_us-img
+{
+    width: clamp(280px, 50vw, 608px);
+  height: clamp(285px, 50vh, 381px);
+}
 .about_us-info
 {
-    font-family: Montserrat;
-    font-weight: 400;
+    @extend %small-text;
     font-style: Regular;
-    font-size: 18px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    @include fluid-type(16, 18);
     color: $primary-text-color;
-    width: 600px;
 }
 .about_us-text
 {
@@ -30,4 +31,45 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+.about_us-bg
+{
+    background-color: #E5E2E3;
+
+}
+.about_us-item
+{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+.about_us-more
+{
+    display: none;
+}
+@media (max-width: 1024px)
+{
+    .about_us-more
+    {
+        cursor: pointer;
+        display: block;
+        font-family: Montserrat;
+        font-weight: 500;
+        @include fluid-type(16, 18);
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $primary-text-color;
+    }
+}
+@media (max-width: 768px)
+{
+    .about_us-info
+    {
+        width: 360px;
+    }
+    .about_us
+    {
+        flex-direction: column;
+    }
 }
