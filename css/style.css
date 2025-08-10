@@ -1,7 +1,14 @@
-.program-info-modified-2, .program-info-modified, .program-info, .card-button, .card__item-text, .modal-button, .info__field, .hero-button, .nav__item-link, .about_us-info {
+.program-info-modified-2, .program-info-modified, .program-info, .card-button, .card__item-text, .modal-button, .info__field, .hero-button, .about_us-info {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.nav__item-link {
+  font-family: "Montserrat";
+  font-weight: 400;
   line-height: 100%;
   letter-spacing: 0%;
 }
@@ -23,12 +30,19 @@
   text-align: center;
 }
 
-.team__item-text, .modal__box-title, .hero-author {
+.team__item-text, .modal__box-title {
   font-family: "Montserrat";
   font-weight: 500;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+}
+
+.hero-author {
+  font-family: "Montserrat";
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .about_us {
@@ -550,6 +564,10 @@
     margin-left: 0px;
   }
 }
+.hero-author {
+  text-align: left;
+}
+
 .price__list {
   display: flex;
   flex-direction: row;
@@ -656,10 +674,17 @@
     flex-direction: column;
   }
 }
-.program-info-modified-2, .program-info-modified, .program-info, .about_us-info, .nav__item-link, .hero-button, .info__field, .modal-button, .card__item-text, .card-button {
+.program-info-modified-2, .program-info-modified, .program-info, .about_us-info, .hero-button, .info__field, .modal-button, .card__item-text, .card-button {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.nav__item-link {
+  font-family: "Montserrat";
+  font-weight: 400;
   line-height: 100%;
   letter-spacing: 0%;
 }
@@ -681,12 +706,19 @@
   text-align: center;
 }
 
-.team__item-text, .hero-author, .modal__box-title {
+.team__item-text, .modal__box-title {
   font-family: "Montserrat";
   font-weight: 500;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+}
+
+.hero-author {
+  font-family: "Montserrat";
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .ss {

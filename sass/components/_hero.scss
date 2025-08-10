@@ -22,7 +22,7 @@
     }
 }
 .hero-author {
-    @extend %paragraph-text;
+    @extend %parag-text;
     @include fluid-type(16, 24); 
     text-align: left;
     font-family: 'Montserrat Alternates';
@@ -208,4 +208,7 @@
     .modal-button {
         margin-left: 0px;
     }
+}
+.hero-author {
+    text-align: left;
 }
