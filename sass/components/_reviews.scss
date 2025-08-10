@@ -1,20 +1,20 @@
-// body {
-//   margin: 0;
-//   padding: 0;
-//   font-family: 'Helvetica Neue', sans-serif;
-//   background-color: #f8f8fa;
-//   // text-align: center;
-//   position: relative;
-//   color: #333;
-//   overflow-x: hidden;
-// }
+.reviews_section {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f8f8fa;
+  text-align: center;
+  position: relative;
+  color: #333;
+  overflow-x: hidden;
+}
 
-// h2 {
-//   font-size: 28px;
-//   margin-top: 50px;
-//   position: relative;
-//   z-index: 1;
-// }
+.reviews {
+  font-size: 28px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+}
 
 .review-container {
   display: flex;
@@ -80,6 +80,10 @@
   margin: 0 10px;
 }
 
+.pagination::before{
+  background-color: #d9627b;
+}
+
 .pagination::after {
   background-color: #d9627b;
 }
@@ -94,9 +98,9 @@
 .circle1 {
   width: 80px;
   height: 80px;
-  left: 30px;
-  top: 120px;
-  border: 10px solid #ccc;
+  left: 50px;
+  top: 100px;
+  border: 10px solid #f0f0f0;
   background: transparent;
 }
 
@@ -112,8 +116,8 @@
 .circle3 {
   width: 60px;
   height: 60px;
-  left: 40%;
-  top: 400px;
+  left: 48%;
+  top: 350px;
   border: 8px solid #999;
   background: transparent;
 }
