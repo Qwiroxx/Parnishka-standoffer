@@ -1,0 +1,105 @@
+.price__list {
+    display: flex; 
+    flex-direction: row;
+    gap: clamp(14px, 1.66vw, 32px);
+
+    &-item {
+        background-color: $price-card-color;
+        border-radius: 25px;
+        
+        &-title {
+            @extend %second-title; 
+            font-family: 'Montserrat Alternates';
+            font-weight: 600;
+            font-style: 'SemiBold';
+        }
+    }
+}
+.price__title {
+    @extend %second-title;
+    font-size: 32px;
+    margin-bottom: 27px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &::after {
+        content: "";
+        background-image: url(/img/price/price-card-bg.png);
+        position: absolute;
+        background-size: cover;
+        z-index: 4;
+        top: 0;
+        left: 150px;
+    }
+
+    &__item {
+
+        &-text {
+            @extend %small-text;
+        }
+    }
+}
+.card-button-div {
+    position: relative;
+}
+.card-button-div::before {
+    content: "";
+    background-image: url(/img/price/price-card-bg.png);
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    max-width: 300px;
+    max-height: 218px;
+    min-height: 145px;
+    min-width: 200px;
+}
+.card-button {
+    margin: 30px;
+    @extend %small-text; 
+    background-color: $hero-btn-bg;
+    padding: 8px 30px 9px 31px;
+    border-radius: 25px;
+    color: $secondary-text-color;
+    box-shadow: 10px 15px 25px 0px $hero-btn-shadow;
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid $hero-btn-bg;
+        background-color: $secondary-text-color;
+        color: $hero-btn-bg;   
+    }
+
+    &:focus {
+        background-color: $hero-btn-bg;
+        color: $secondary-text-color;
+        border: 1px solid transparent;
+        box-shadow: 10px 15px 25px 0px $hero-btn-shadow, inset 0px 4px 4px 0px $hero-inner-btn-shadow;
+    }
+}
+.card-button-div {
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .price__list-item-title {
+        @include fluid-type(18,20);
+         padding-top:  calc(20px + (28 - 20) * ((100vw - 768px) / (1920 - 768)));
+         padding-bottom: clamp(17px,calc(17px + (40 - 17) * ((100vw - 768px) / (1920 - 768))),40px);
+    }
+}
+@media (max-width: 768px) {
+    .price__list-item-title {
+        padding-top: 20px;
+        padding-bottom: 16px;
+    }
+}
+@media (max-width: 350px) {
+    .price__list {
+        display: flex;
+        flex-direction: column;
+    }
+}

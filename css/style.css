@@ -5,8 +5,22 @@
   line-height: 100%;
   letter-spacing: 0%;
 }
-
+.card-button, .card__item-text, .modal-button, .info__field, .hero-button, .nav__item-link, .about_us-info {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
 .speakers__title, .program-title, .about_us-title {
+  font-family: "Montserrat Alternates";
+  font-weight: 500;
+  font-style: Medium;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.speakers__title, .price__title, .price__list-item-title, .about_us-title {
   font-family: "Montserrat Alternates";
   font-weight: 500;
   font-style: Medium;
@@ -102,7 +116,6 @@
     font-family: Montserrat;
     font-weight: 500;
     font-size: 16px;
-    leading-trim: NONE;
     line-height: 100%;
     letter-spacing: 0%;
     color: #3C322D;
@@ -645,7 +658,112 @@
   color: #3C322D;
   width: 400px;
 }
+.price__list {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(14px, 1.66vw, 32px);
+}
+.price__list-item {
+  background-color: rgb(250, 251, 251);
+  border-radius: 25px;
+}
+.price__list-item-title {
+  font-family: "Montserrat Alternates";
+  font-weight: 600;
+  font-style: "SemiBold";
+}
 
+.price__title {
+  font-size: 32px;
+  margin-bottom: 27px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card::after {
+  content: "";
+  background-image: url(/img/price/price-card-bg.png);
+  position: absolute;
+  background-size: cover;
+  z-index: 4;
+  top: 0;
+  left: 150px;
+}
+.card-button-div {
+  position: relative;
+}
+
+.card-button-div::before {
+  content: "";
+  background-image: url(/img/price/price-card-bg.png);
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  max-width: 300px;
+  max-height: 218px;
+  min-height: 145px;
+  min-width: 200px;
+}
+
+.card-button {
+  margin: 30px;
+  background-color: rgb(243, 132, 140);
+  padding: 8px 30px 9px 31px;
+  border-radius: 25px;
+  color: #F6F7F7;
+  box-shadow: 10px 15px 25px 0px rgba(232, 183, 183, 0.45);
+  border: 1px solid transparent;
+}
+.card-button:hover {
+  border: 1px solid rgb(243, 132, 140);
+  background-color: #F6F7F7;
+  color: rgb(243, 132, 140);
+}
+.card-button:focus {
+  background-color: rgb(243, 132, 140);
+  color: #F6F7F7;
+  border: 1px solid transparent;
+  box-shadow: 10px 15px 25px 0px rgba(232, 183, 183, 0.45), inset 0px 4px 4px 0px rgba(107, 66, 66, 0.25);
+}
+
+.card-button-div {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .price__list-item-title {
+    font-size: 18px;
+    padding-top: calc(20px + 8 * (100vw - 768px) / 1152);
+    padding-bottom: clamp(17px, 17px + 23 * (100vw - 768px) / 1152, 40px);
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 375px) {
+  .price__list-item-title {
+    font-size: calc(18px + 2 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1920px) {
+  .price__list-item-title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .price__list-item-title {
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+}
+@media (max-width: 350px) {
+  .price__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .reviews_section {
   margin: 0;
   padding: 0;
