@@ -1,0 +1,78 @@
+@import "../utils/placeholders";
+@import "../utils/variables";
+.ss
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 65px;
+}
+.sss
+{
+    display: flex;
+    flex-direction: column;
+}
+.program
+{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    &-img
+    {
+        width: 290px;
+    }
+    &_list-img
+    {
+        position: relative;
+        top: 100px;
+        display: flex;
+    }
+    &-section
+    {
+        gap: 215px;
+        display: flex;
+        align-items: center;
+    }
+    &-list
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+    }
+    &-title
+    {
+        color: $primary-text-color;
+        font-size: 32px;
+        text-align: start;
+        @extend %second-title;
+    }
+    &-ico
+    {
+        width: 24px;
+        height: 24px;
+    }
+    &-item
+    {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+    }
+    &-info
+    {
+        color: $primary-text-color;
+        @extend %small-text;
+        &-modified
+        {
+            color: $primary-text-color;
+            @extend %small-text;
+            width: 370px;
+            &-2
+            {
+                color: $primary-text-color;
+                @extend %small-text;
+                width: 400px;
+            }
+        }
+    }
+}
