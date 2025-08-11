@@ -115,9 +115,6 @@
              &:hover {
                 padding: 10px 28px;
             }
-            &-link {
-                @extend %smal-text;
-            }
         }
     }
     .header__burger-btn {

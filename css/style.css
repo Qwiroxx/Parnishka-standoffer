@@ -1,14 +1,7 @@
-.program-info-modified-2, .program-info-modified, .program-info, .card-button, .card__item-text, .modal-button, .info__field, .hero-button, .about_us-info {
+.program-info-modified-2, .program-info-modified, .program-info, .card-button, .card__item-text, .modal-button, .info__field, .hero-button, .nav__item-link, .about_us-info {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
-}
-
-.nav__item-link {
-  font-family: "Montserrat";
-  font-weight: 400;
   line-height: 100%;
   letter-spacing: 0%;
 }
@@ -160,11 +153,13 @@
   color: #F6F7F7;
   box-shadow: 0px 7px 27px -2px rgba(253, 88, 140, 0.35);
 }
-.nav__item:hover .nav__item-link {
-  color: #F6F7F7;
-}
 .nav__item-link {
+  font-size: 18px;
   color: #3C322D;
+}
+
+.nav__item-link {
+  color: #F6F7F7;
 }
 
 .header__burger-btn {
@@ -674,17 +669,10 @@
     flex-direction: column;
   }
 }
-.program-info-modified-2, .program-info-modified, .program-info, .about_us-info, .hero-button, .info__field, .modal-button, .card__item-text, .card-button {
+.program-info-modified-2, .program-info-modified, .program-info, .about_us-info, .nav__item-link, .hero-button, .info__field, .modal-button, .card__item-text, .card-button {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
-}
-
-.nav__item-link {
-  font-family: "Montserrat";
-  font-weight: 400;
   line-height: 100%;
   letter-spacing: 0%;
 }
