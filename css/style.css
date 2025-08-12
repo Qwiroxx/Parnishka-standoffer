@@ -168,7 +168,7 @@
 }
 
 .nav__item-link {
-  color: #F6F7F7;
+  color: #3C322D;
 }
 
 .header__burger-btn {
@@ -984,7 +984,7 @@
 }
 
 .bg-image {
-  background: url("/img/registration/donuts-bg.png") center/cover no-repeat;
+  background: url("/img/registration/donuts.png") center/cover no-repeat;
   position: absolute;
   top: 0;
   right: 0;

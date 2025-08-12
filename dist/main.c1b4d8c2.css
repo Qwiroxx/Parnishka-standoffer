@@ -1,0 +1,19 @@
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+* {
+  margin: 0;
+}
+
+button {
+  background-color: #0000;
+  border: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.c1b4d8c2.css.map */
