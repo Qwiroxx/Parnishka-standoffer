@@ -8,15 +8,14 @@
         border-radius: 25px;
         
         &-title {
-            @extend %second-title; 
+            @extend %third-title; 
             font-family: 'Montserrat Alternates';
-            font-weight: 600;
             font-style: 'SemiBold';
         }
     }
 }
 .price__title {
-    @extend %second-title;
+    @extend %third-title;
     font-size: 32px;
     margin-bottom: 27px;
 }

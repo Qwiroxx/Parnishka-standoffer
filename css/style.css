@@ -6,9 +6,18 @@
   letter-spacing: 0%;
 }
 
-.speakers__title, .program-title, .price__title, .price__list-item-title, .about_us-title {
+.speakers__title, .program-title, .about_us-title {
   font-family: "Montserrat Alternates";
   font-weight: 500;
+  font-style: Medium;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.price__title, .price__list-item-title {
+  font-family: "Montserrat Alternates";
+  font-weight: 600;
   font-style: Medium;
   line-height: 100%;
   letter-spacing: 0%;
@@ -574,7 +583,6 @@
 }
 .price__list-item-title {
   font-family: "Montserrat Alternates";
-  font-weight: 600;
   font-style: "SemiBold";
 }
 
@@ -709,9 +717,18 @@
   letter-spacing: 0%;
 }
 
-.speakers__title, .program-title, .about_us-title, .price__list-item-title, .price__title {
+.speakers__title, .program-title, .about_us-title {
   font-family: "Montserrat Alternates";
   font-weight: 500;
+  font-style: Medium;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.price__list-item-title, .price__title {
+  font-family: "Montserrat Alternates";
+  font-weight: 600;
   font-style: Medium;
   line-height: 100%;
   letter-spacing: 0%;
