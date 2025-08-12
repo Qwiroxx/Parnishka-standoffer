@@ -1,1 +1,94 @@
+.registration_container{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #f8f6f7, #fff);
+}
 
+.registration {
+  text-align: center;
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #f8f6f7, #fff);
+}
+
+.registration h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.card {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.card-left img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.card-left .date {
+  font-size: 16px;
+  color: #333;
+}
+
+.card-right {
+  flex: 2;
+  display: flex;
+  position: relative;
+}
+
+.form-container {
+  background: #fff;
+  padding: 40px;
+  z-index: 2;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.form-container h3 {
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  margin-bottom: 15px;
+}
+
+.form-container button {
+  background: #f66b6b;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.bg-image {
+  background: url('/img/registration/donuts-bg.png') center/cover no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
