@@ -1,22 +1,26 @@
 @import "../utils/placeholders";
 @import "../utils/variables";
-.ss
-{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    bottom: 65px;
-}
-.sss
-{
-    display: flex;
-    flex-direction: column;
-}
 .program
 {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    &-info-modified
+    {
+        @include fluid-type(16, 18);
+    }
+    &_img-first
+    {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: 65px;
+    }
+    &_img-second
+    {
+        display: flex;
+        flex-direction: column;
+    }
     &-img
     {
         width: 290px;
@@ -43,7 +47,7 @@
     &-title
     {
         color: $primary-text-color;
-        font-size: 32px;
+        @include fluid-type(24, 32);
         text-align: start;
         @extend %second-title;
     }
@@ -73,6 +77,76 @@
                 @extend %small-text;
                 width: 400px;
             }
+        }
+    }
+    &_read-more
+    {
+        display: none;
+    }
+}
+@media (max-width: 1024px)
+{
+    .program
+    {
+        &-section
+        {
+            align-items: center;
+            gap: 200px;
+        }
+        &_img-first
+        {
+            position: static;
+            gap: 20px;
+        }
+        &_img-second
+        {
+            gap: 40px;
+        }
+        &-img
+        {
+            width: 190px;
+        }
+        &-info-modified-2
+        {
+            display: none;
+        }
+        &_read-more
+        {
+            
+            cursor: pointer;
+            font-family: Montserrat;
+            font-weight: 500;
+            @include fluid-type(16, 18);
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: $primary-text-color;
+            display: block;
+        }
+    }
+}
+@media (max-width: 768px)
+{
+    .program
+    {
+        &-section
+        {
+            flex-direction: column;
+            gap: 0;
+        }
+        &_img-first
+        {
+            gap: 30px;
+            position: relative;
+            bottom: 40px;
+        }
+        &_img-second
+        {
+            gap: 30px;
+        }
+        &-img
+        {
+            width: 200px;
         }
     }
 }

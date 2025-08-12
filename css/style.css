@@ -709,22 +709,33 @@
   letter-spacing: 0%;
 }
 
-.ss {
+.program {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.program-info-modified {
+  font-size: 16px;
+}
+@media only screen and (min-width: 375px) {
+  .program-info-modified {
+    font-size: calc(16px + 2 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .program-info-modified {
+    font-size: 18px;
+  }
+}
+.program_img-first {
   display: flex;
   flex-direction: column;
   position: relative;
   bottom: 65px;
 }
-
-.sss {
+.program_img-second {
   display: flex;
   flex-direction: column;
-}
-
-.program {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
 }
 .program-img {
   width: 290px;
@@ -747,8 +758,18 @@
 }
 .program-title {
   color: #3C322D;
-  font-size: 32px;
+  font-size: 24px;
   text-align: start;
+}
+@media only screen and (min-width: 375px) {
+  .program-title {
+    font-size: calc(24px + 8 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .program-title {
+    font-size: 32px;
+  }
 }
 .program-ico {
   width: 24px;
@@ -769,6 +790,161 @@
 .program-info-modified-2 {
   color: #3C322D;
   width: 400px;
+}
+.program_read-more {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .program-section {
+    align-items: center;
+    gap: 200px;
+  }
+  .program_img-first {
+    position: static;
+    gap: 20px;
+  }
+  .program_img-second {
+    gap: 40px;
+  }
+  .program-img {
+    width: 190px;
+  }
+  .program-info-modified-2 {
+    display: none;
+  }
+  .program_read-more {
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #3C322D;
+    display: block;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 375px) {
+  .program_read-more {
+    font-size: calc(16px + 2 * (100vw - 375px) / 1545);
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 1920px) {
+  .program_read-more {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .program-section {
+    flex-direction: column;
+    gap: 0;
+  }
+  .program_img-first {
+    gap: 30px;
+    position: relative;
+    bottom: 40px;
+  }
+  .program_img-second {
+    gap: 30px;
+  }
+  .program-img {
+    width: 200px;
+  }
+}
+.registration_container {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #f8f6f7, #fff);
+}
+
+.registration {
+  text-align: center;
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #f8f6f7, #fff);
+}
+
+.registration h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.card {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.card-left img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.card-left .date {
+  font-size: 16px;
+  color: #333;
+}
+
+.card-right {
+  flex: 2;
+  display: flex;
+  position: relative;
+}
+
+.form-container {
+  background: #fff;
+  padding: 40px;
+  z-index: 2;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.form-container h3 {
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  margin-bottom: 15px;
+}
+
+.form-container button {
+  background: #f66b6b;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.bg-image {
+  background: url("/img/registration/donuts-bg.png") center/cover no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 .reviews_section {
