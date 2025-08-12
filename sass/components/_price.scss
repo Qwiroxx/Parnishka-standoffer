@@ -20,20 +20,11 @@
     font-size: 32px;
     margin-bottom: 27px;
 }
-.card {
+.card-price {
     display: flex;
     flex-direction: column;
     gap: 16px;
-
-    &::after {
-        content: "";
-        background-image: url(/img/price/price-card-bg.png);
-        position: absolute;
-        background-size: cover;
-        z-index: 4;
-        top: 0;
-        left: 150px;
-    }
+    background: none;
 
     &__item {
 
@@ -44,18 +35,42 @@
 }
 .card-button-div {
     position: relative;
+    padding-top: clamp(32px, calc(32px + (160 - 32) * ((100vw - 320px) / (1920 - 320))), 160px);
 }
+.price__list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 10px 15px 25px 0px rgba(210, 201, 201, 0.45);
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid rgba(243, 132, 140, 1);
+    }
+}
+.price__list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-price {
+    margin-bottom: auto; 
+}
+
+.card-button-div {
+    margin-top: auto; 
+}
+
 .card-button-div::before {
     content: "";
     background-image: url(/img/price/price-card-bg.png);
     position: absolute;
     background-size: cover;
-    top: 0;
-    left: 0;
-    max-width: 300px;
-    max-height: 218px;
-    min-height: 145px;
-    min-width: 200px;
+    top: -100%;
+    left: 10%;
+    width: clamp(200px,calc(200px + (300 - 200) * ((100vw - 320px) / (1920 - 320))),300px);
+    height: clamp(145px,calc(145px + (218 - 145) * ((100vw - 320px) / (1920 - 320))),218px);
 }
 .card-button {
     margin: 30px;
@@ -80,9 +95,23 @@
         box-shadow: 10px 15px 25px 0px $hero-btn-shadow, inset 0px 4px 4px 0px $hero-inner-btn-shadow;
     }
 }
+.card-price__item-text {
+    position: relative;
+    padding-left: 51px;
+}
+.card-price__item-text::before {
+    content: "";
+    background-image: url(/img/price/price-card-symbol.png);
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 10px;
+}
 .card-button-div {
     display: flex;
     justify-content: center;
+    padding-top: 32px;
 }
 @media (min-width: 768px) {
     .price__list-item-title {

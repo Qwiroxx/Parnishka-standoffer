@@ -117,7 +117,6 @@
             font-family: Montserrat;
             font-weight: 500;
             @include fluid-type(16, 18);
-            leading-trim: NONE;
             line-height: 100%;
             letter-spacing: 0%;
             color: $primary-text-color;

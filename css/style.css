@@ -1,4 +1,4 @@
-.program-info-modified-2, .program-info-modified, .program-info, .card-button, .card__item-text, .modal-button, .info__field, .hero-button, .nav__item-link, .about_us-info {
+.program-info-modified-2, .program-info-modified, .program-info, .card-button, .card-price__item-text, .modal-button, .info__field, .hero-button, .nav__item-link, .about_us-info {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
@@ -583,22 +583,40 @@
   margin-bottom: 27px;
 }
 
-.card {
+.card-price {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-.card::after {
-  content: "";
-  background-image: url(/img/price/price-card-bg.png);
-  position: absolute;
-  background-size: cover;
-  z-index: 4;
-  top: 0;
-  left: 150px;
+  background: none;
 }
 .card-button-div {
   position: relative;
+  padding-top: clamp(32px, 32px + 128 * (100vw - 320px) / 1600, 160px);
+}
+
+.price__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 10px 15px 25px 0px rgba(210, 201, 201, 0.45);
+  border: 1px solid transparent;
+}
+.price__list-item:hover {
+  border: 1px solid rgb(243, 132, 140);
+}
+
+.price__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-price {
+  margin-bottom: auto;
+}
+
+.card-button-div {
+  margin-top: auto;
 }
 
 .card-button-div::before {
@@ -606,12 +624,10 @@
   background-image: url(/img/price/price-card-bg.png);
   position: absolute;
   background-size: cover;
-  top: 0;
-  left: 0;
-  max-width: 300px;
-  max-height: 218px;
-  min-height: 145px;
-  min-width: 200px;
+  top: -100%;
+  left: 10%;
+  width: clamp(200px, 200px + 100 * (100vw - 320px) / 1600, 300px);
+  height: clamp(145px, 145px + 73 * (100vw - 320px) / 1600, 218px);
 }
 
 .card-button {
@@ -635,9 +651,25 @@
   box-shadow: 10px 15px 25px 0px rgba(232, 183, 183, 0.45), inset 0px 4px 4px 0px rgba(107, 66, 66, 0.25);
 }
 
+.card-price__item-text {
+  position: relative;
+  padding-left: 51px;
+}
+
+.card-price__item-text::before {
+  content: "";
+  background-image: url(/img/price/price-card-symbol.png);
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 10px;
+}
+
 .card-button-div {
   display: flex;
   justify-content: center;
+  padding-top: 32px;
 }
 
 @media (min-width: 768px) {
@@ -669,7 +701,7 @@
     flex-direction: column;
   }
 }
-.program-info-modified-2, .program-info-modified, .program-info, .about_us-info, .nav__item-link, .hero-button, .info__field, .modal-button, .card__item-text, .card-button {
+.program-info-modified-2, .program-info-modified, .program-info, .about_us-info, .nav__item-link, .hero-button, .info__field, .modal-button, .card-price__item-text, .card-button {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
@@ -818,7 +850,6 @@
     font-family: Montserrat;
     font-weight: 500;
     font-size: 16px;
-    leading-trim: NONE;
     line-height: 100%;
     letter-spacing: 0%;
     color: #3C322D;
