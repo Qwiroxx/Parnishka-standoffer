@@ -1,12 +1,39 @@
-.registration_container{
+.registration_container {
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #f8f6f7, #fff);
+  position: relative;
+  overflow: hidden;
+}
+
+.registration_container::before,
+.registration_container::after {
+  content: "";
+  position: absolute;
+  border: 20px solid rgba(246, 107, 107, 0.1); 
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.registration_container::before {
+  width: 100px; 
+  height: 100px;
+  top: 55%; 
+  left: 40px; 
+}
+
+.registration_container::after {
+  width: 80px;
+  height: 80px;
+  bottom: 30%;
+  right: 20px;
 }
 
 .registration {
   text-align: center;
   padding: 50px 0;
-  background: linear-gradient(to bottom, #f8f6f7, #fff);
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 .registration h2 {
@@ -22,6 +49,8 @@
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
 }
 
 .card-left {
@@ -82,7 +111,7 @@
 }
 
 .bg-image {
-  background: url('/img/registration/donuts.png') center/cover no-repeat;
+  background: url('/img/registration/donuts-bg.png') center/cover no-repeat;
   position: absolute;
   top: 0;
   right: 0;
