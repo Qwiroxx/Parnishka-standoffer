@@ -1,4 +1,4 @@
-.program-info-modified-2, .program-info-modified, .program-info, .card-button, .card-price__item-text, .modal-button, .info__field, .hero-button, .nav__item-link, .about_us-info {
+.program-info-modified-2, .program-info-modified, .program-info, .card-button, .card-price__item-text, .modal-button, .info__field, .hero-button, .about_us-info {
   letter-spacing: 0%;
   font-family: Montserrat;
   font-size: 18px;
@@ -142,6 +142,10 @@
   box-shadow: 0 7px 27px -2px #fd588c59;
 }
 
+.nav__item-link:hover {
+  color: #f6f7f7;
+}
+
 .nav__item-link {
   color: #3c322d;
   font-size: 18px;
@@ -227,7 +231,7 @@
     flex-direction: column;
     gap: clamp(40px, 5vw, 60px);
     padding-top: 140px;
-    padding-bottom: clamp(52px, 30vw, 290px);
+    padding-bottom: 400px;
   }
 
   .nav__item, .nav__item:hover {
@@ -292,26 +296,36 @@
   }
 
   .two {
+    width: 100px;
+    height: 100px;
     top: -280px;
     left: 285px;
   }
 
   .three {
+    width: 100px;
+    height: 100px;
     top: -640px;
     left: -110px;
   }
 
   .four {
+    width: 100px;
+    height: 100px;
     top: 85px;
     left: 250px;
   }
 
   .five {
+    width: 20px;
+    height: 20px;
     top: -275px;
     left: -100px;
   }
 
   .six {
+    width: 20px;
+    height: 20px;
     top: -35px;
     left: 60px;
   }
@@ -320,6 +334,15 @@
 .header__logo {
   width: clamp(106px, 20vw, 158px);
   height: clamp(46.25px, 9vw, 70px);
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-bg-circle {
+  position: absolute;
+  left: 360px;
 }
 
 .hero-title {
@@ -742,10 +765,17 @@
   }
 }
 
-.program-info-modified-2, .program-info-modified, .program-info, .about_us-info, .nav__item-link, .hero-button, .info__field, .modal-button, .card-price__item-text, .card-button {
+.program-info-modified-2, .program-info-modified, .program-info, .about_us-info, .hero-button, .info__field, .modal-button, .card-price__item-text, .card-button {
   letter-spacing: 0%;
   font-family: Montserrat;
   font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.nav__item-link {
+  letter-spacing: 0%;
+  font-family: Montserrat;
   font-weight: 400;
   line-height: 100%;
 }
@@ -1211,6 +1241,7 @@
 
 .speakers {
   text-align: center;
+  margin-bottom: 101px;
 }
 
 .speakers__title {
@@ -1424,5 +1455,22 @@ footer {
   max-width: 1258px;
   margin: 0 auto;
   padding: 0 16px;
+}
+
+.header-hero-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.header-hero-bg:before {
+  content: "";
+  z-index: -1;
+  background-image: url("hero-header-bg.8061c6d4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+  transform: scaleX(-1);
 }
 /*# sourceMappingURL=main.b2625c6b.css.map */

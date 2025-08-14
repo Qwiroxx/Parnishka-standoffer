@@ -1,4 +1,10 @@
-
+.hero {
+    position: relative;
+}
+.hero-bg-circle { 
+    position: absolute;
+    left: 360px;
+}
 .hero-title {
     font-family: 'Montserrat Alternates';
     font-weight: 600;
