@@ -703,6 +703,11 @@
     padding-bottom: 16px;
   }
 }
+@media (max-width: 700px) {
+  .price__list {
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 350px) {
   .price__list {
     display: flex;
@@ -1330,21 +1335,21 @@ footer {
   z-index: 0;
 }
 
-.circle.small {
+.circle_small {
   width: 40px;
   height: 40px;
   top: 20px;
   left: 30px;
 }
 
-.circle.medium {
+.circle_medium {
   width: 80px;
   height: 80px;
   bottom: 50px;
   right: 60px;
 }
 
-.circle.large {
+.circle_large {
   width: 150px;
   height: 150px;
   top: 100px;
