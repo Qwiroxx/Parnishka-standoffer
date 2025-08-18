@@ -121,3 +121,92 @@
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
+
+@media (max-width: 992px) {
+  .registration h2 {
+    font-size: 22px;
+  }
+
+  .card-left img {
+    width: 100px;
+  }
+
+  .card-left .date {
+    font-size: 14px;
+  }
+
+  .form-container {
+    padding: 30px;
+  }
+
+  .form-container h3 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  .card-left {
+    padding: 30px 20px;
+  }
+
+  .card-left img {
+    width: 90px;
+    margin-bottom: 15px;
+  }
+
+  .form-container {
+    border-radius: 0;
+    padding: 25px 20px;
+  }
+
+  .bg-image {
+    display: none; 
+  }
+
+  .registration h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration {
+    padding: 30px 0;
+  }
+
+  .registration h2 {
+    font-size: 18px;
+  }
+
+  .card-left img {
+    width: 70px;
+  }
+
+  .card-left .date {
+    font-size: 13px;
+  }
+
+  .form-container h3 {
+    font-size: 14px;
+  }
+
+  .form-container input {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .form-container button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .registration_container::before,
+  .registration_container::after {
+    display: none; 
+  }
+}
