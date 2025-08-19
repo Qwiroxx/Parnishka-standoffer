@@ -69,10 +69,6 @@
   display: flex;
 }
 
-.about_us-bg {
-  background-color: #e5e2e3;
-}
-
 .about_us-item {
   flex-direction: column;
   gap: 23px;
@@ -780,7 +776,7 @@
   line-height: 100%;
 }
 
-.speakers__title, .program-title, .about_us-title {
+.speakers__title, .registration h2, .program-title, .about_us-title {
   font-family: Montserrat Alternates;
   font-weight: 500;
   font-style: Medium;
@@ -995,6 +991,7 @@
   }
 
   .program-title {
+    text-align: center;
     margin-top: 28px;
   }
 
@@ -1004,8 +1001,7 @@
 }
 
 .registration_container {
-  background: linear-gradient(#f8f6f7, #fff);
-  font-family: Arial, sans-serif;
+  font-family: Montserrat Alternates, sans-serif;
   position: relative;
   overflow: hidden;
 }
@@ -1041,7 +1037,8 @@
 
 .registration h2 {
   margin-bottom: 30px;
-  font-size: 24px;
+  font-family: Montserrat Alternates;
+  font-size: 28px;
 }
 
 .card {
@@ -1212,18 +1209,23 @@
 .reviews_section {
   text-align: center;
   color: #333;
-  background-color: #f8f8fa;
   margin: 0;
   padding: 0;
-  font-family: Helvetica Neue, sans-serif;
+  font-family: Montserrat Alternates, sans-serif;
   position: relative;
   overflow-x: hidden;
 }
 
 .reviews {
   z-index: 1;
-  margin-top: 50px;
+  font-family: Montserrat Alternates;
   font-size: 28px;
+  font-weight: 500;
+  font-style: Medium;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-top: 50px;
+  line-height: 100%;
   position: relative;
 }
 
@@ -1519,9 +1521,8 @@
 
 .contact-section {
   text-align: center;
-  background: linear-gradient(#f9f7f8, #fff);
   padding: 50px 20px;
-  font-family: Arial, sans-serif;
+  font-family: Montserrat Alternates, sans-serif;
   position: relative;
   overflow: hidden;
 }
@@ -1716,14 +1717,21 @@ footer {
   padding: 0 16px;
 }
 
+.main-bg {
+  background: linear-gradient(180.11deg, #e5e2e3 10.73%, #fdfefe 38.02%, #e5e2e3 71.11%, #fdfefe 99.91%);
+  min-height: 100dvh;
+}
+
 .header-hero-bg {
+  z-index: 0;
   position: relative;
   overflow: hidden;
 }
 
 .header-hero-bg:before {
   content: "";
-  z-index: -1;
+  z-index: 0;
+  pointer-events: none;
   background-image: url("hero-header-bg.8061c6d4.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -1731,5 +1739,10 @@ footer {
   position: absolute;
   inset: 0;
   transform: scaleX(-1);
+}
+
+.header-hero-bg > * {
+  z-index: 1;
+  position: relative;
 }
 /*# sourceMappingURL=main.b2625c6b.css.map */

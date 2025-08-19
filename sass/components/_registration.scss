@@ -1,6 +1,5 @@
 .registration_container {
   font-family: "Montserrat Alternates", sans-serif;
-  background: linear-gradient(to bottom, #f8f6f7, #fff);
   position: relative;
   overflow: hidden;
 }
@@ -36,8 +35,10 @@
 }
 
 .registration h2 {
-  font-size: 24px;
   margin-bottom: 30px;
+  font-family: "Montserrat Alternates";
+  font-size: 28px;
+  @extend %second-title;
 }
 
 .card {
