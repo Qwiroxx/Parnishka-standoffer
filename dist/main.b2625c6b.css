@@ -1036,7 +1036,6 @@
   text-align: center;
   z-index: 1;
   background: none;
-  padding: 50px 0;
   position: relative;
 }
 
@@ -1179,10 +1178,6 @@
 }
 
 @media (width <= 480px) {
-  .registration {
-    padding: 30px 0;
-  }
-
   .registration h2 {
     font-size: 18px;
   }

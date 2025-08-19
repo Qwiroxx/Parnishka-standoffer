@@ -30,7 +30,6 @@
 
 .registration {
   text-align: center;
-  padding: 50px 0;
   background: transparent;
   position: relative;
   z-index: 1;
@@ -175,9 +174,6 @@
 }
 
 @media (max-width: 480px) {
-  .registration {
-    padding: 30px 0;
-  }
 
   .registration h2 {
     font-size: 18px;
