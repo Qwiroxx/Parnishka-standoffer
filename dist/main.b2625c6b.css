@@ -110,7 +110,7 @@
 
 @media (width <= 768px) {
   .about_us-info {
-    width: 360px;
+    max-width: 320px;
   }
 
   .about_us {
@@ -868,6 +868,7 @@
 .program-section {
   align-items: center;
   gap: 215px;
+  height: 750px;
   display: flex;
 }
 
@@ -976,6 +977,7 @@
   .program-section {
     flex-direction: column;
     gap: 0;
+    height: 1000px;
   }
 
   .program_img-first {
@@ -989,7 +991,15 @@
   }
 
   .program-img {
-    width: 200px;
+    width: 150px;
+  }
+
+  .program-title {
+    margin-top: 28px;
+  }
+
+  .program-info, .program-info-modified {
+    max-width: 320px;
   }
 }
 
@@ -1116,6 +1126,94 @@
   right: 0;
 }
 
+@media (width <= 992px) {
+  .registration h2 {
+    font-size: 22px;
+  }
+
+  .card-left img {
+    width: 100px;
+  }
+
+  .card-left .date {
+    font-size: 14px;
+  }
+
+  .form-container {
+    padding: 30px;
+  }
+
+  .form-container h3 {
+    font-size: 15px;
+  }
+}
+
+@media (width <= 768px) {
+  .card {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  .card-left {
+    padding: 30px 20px;
+  }
+
+  .card-left img {
+    width: 90px;
+    margin-bottom: 15px;
+  }
+
+  .form-container {
+    border-radius: 0;
+    padding: 25px 20px;
+  }
+
+  .bg-image {
+    display: none;
+  }
+
+  .registration h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+@media (width <= 480px) {
+  .registration {
+    padding: 30px 0;
+  }
+
+  .registration h2 {
+    font-size: 18px;
+  }
+
+  .card-left img {
+    width: 70px;
+  }
+
+  .card-left .date {
+    font-size: 13px;
+  }
+
+  .form-container h3 {
+    font-size: 14px;
+  }
+
+  .form-container input {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .form-container button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .registration_container:before, .registration_container:after {
+    display: none;
+  }
+}
+
 .reviews_section {
   text-align: center;
   color: #333;
@@ -1230,6 +1328,81 @@
   height: 60px;
   top: 350px;
   left: 48%;
+}
+
+@media (width <= 992px) {
+  .reviews {
+    font-size: 24px;
+  }
+
+  .review-container {
+    gap: 40px;
+  }
+
+  .review img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .main-review {
+    max-width: 600px;
+    font-size: 15px;
+  }
+}
+
+@media (width <= 768px) {
+  .review-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .review img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .reviews {
+    margin-top: 30px;
+    font-size: 22px;
+  }
+
+  .main-review {
+    margin: 30px auto 15px;
+    font-size: 14px;
+  }
+}
+
+@media (width <= 480px) {
+  .reviews {
+    font-size: 20px;
+  }
+
+  .review img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .stars {
+    font-size: 16px;
+  }
+
+  .main-review {
+    padding: 0 15px;
+    font-size: 13px;
+  }
+
+  .pagination {
+    font-size: 12px;
+  }
+
+  .circle {
+    display: none;
+  }
 }
 
 .speakers .container {
@@ -1448,6 +1621,97 @@ footer {
   height: 150px;
   top: 100px;
   right: -50px;
+}
+
+@media (width <= 992px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .contact-section h2 {
+    font-size: 24px;
+  }
+
+  .contact-form input {
+    padding: 7px;
+    font-size: 13px;
+  }
+
+  .contact-btn {
+    padding: 9px 25px;
+    font-size: 13px;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}
+
+@media (width <= 768px) {
+  .contact-section {
+    padding: 35px 15px;
+  }
+
+  .contact-section h2 {
+    margin-bottom: 8px;
+    font-size: 22px;
+  }
+
+  .contact-section p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .contact-form {
+    max-width: 320px;
+  }
+
+  .social {
+    margin-top: 20px;
+  }
+
+  .social img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .circle_large {
+    width: 100px;
+    height: 100px;
+    right: -30px;
+  }
+}
+
+@media (width <= 480px) {
+  .contact-section {
+    padding: 25px 10px;
+  }
+
+  .contact-section h2 {
+    font-size: 20px;
+  }
+
+  .contact-section p {
+    font-size: 13px;
+  }
+
+  .contact-form input {
+    margin: 6px 0;
+    font-size: 13px;
+  }
+
+  .contact-btn {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  .circle {
+    display: none;
+  }
 }
 
 .container {

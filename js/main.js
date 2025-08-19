@@ -6,6 +6,7 @@ import team from "bundle-text:/team.html"
 import price from "bundle-text:/price.html"
 import reviews from "bundle-text:/reviews.html"
 import registration from "bundle-text:/registration.html"
+import footer from "bundle-text:/footer.html"
 
 function insertHtmlFragment(targetId, htmlContent) {
     const targetElement = document.getElementById(targetId);
@@ -26,4 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     insertHtmlFragment("price", price);
     insertHtmlFragment("reviews", reviews);
     insertHtmlFragment("registration", registration);
+    insertHtmlFragment("footer", footer);
 });

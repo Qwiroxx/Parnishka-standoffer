@@ -97,4 +97,77 @@ footer {
   height: 150px;
   top: 100px;
   right: -50px;
+}
+
+@media (max-width: 992px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+  .contact-section h2 {
+    font-size: 24px;
+  }
+  .contact-form input {
+    font-size: 13px;
+    padding: 7px;
+  }
+  .contact-btn {
+    padding: 9px 25px;
+    font-size: 13px;
+  }
+  footer {
+    font-size: 13px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 35px 15px;
+  }
+  .contact-section h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .contact-section p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .contact-form {
+    max-width: 320px;
+  }
+  .social {
+    margin-top: 20px;
+  }
+  .social img {
+    width: 18px;
+    height: 18px;
+  }
+  .circle_large {
+    width: 100px;
+    height: 100px;
+    right: -30px;
+  }
+}
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 25px 10px;
+  }
+  .contact-section h2 {
+    font-size: 20px;
+  }
+  .contact-section p {
+    font-size: 13px;
+  }
+  .contact-form input {
+    font-size: 13px;
+    margin: 6px 0;
+  }
+  .contact-btn {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+  footer {
+    font-size: 12px;
+  }
+  .circle {
+    display: none;
+  }
 }/*# sourceMappingURL=footer.css.map */
