@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.program-info-modified-2, .program-info-modified, .program-info, .card-button, .card-price__item-text, .modal-button, .info__field, .hero-button, .about_us-info {
+.registration-button, .program-info-modified-2, .program-info-modified, .program-info, .card-button, .card-price__item-text, .modal-button, .info__field, .hero-button, .about_us-info {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
@@ -7,7 +7,7 @@
   letter-spacing: 0%;
 }
 
-.nav__item-link {
+.form-container input, .nav__item-link {
   font-family: "Montserrat";
   font-weight: 400;
   line-height: 100%;
@@ -48,7 +48,7 @@
   text-align: center;
 }
 
-.hero-author {
+.form-title, .hero-author {
   font-family: "Montserrat";
   font-weight: 500;
   line-height: 100%;
@@ -740,7 +740,7 @@
     flex-direction: column;
   }
 }
-.program-info-modified-2, .program-info-modified, .program-info, .about_us-info, .hero-button, .info__field, .modal-button, .card-price__item-text, .card-button {
+.registration-button, .program-info-modified-2, .program-info-modified, .program-info, .about_us-info, .hero-button, .info__field, .modal-button, .card-price__item-text, .card-button {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
@@ -748,7 +748,7 @@
   letter-spacing: 0%;
 }
 
-.nav__item-link {
+.form-container input, .nav__item-link {
   font-family: "Montserrat";
   font-weight: 400;
   line-height: 100%;
@@ -789,7 +789,7 @@
   text-align: center;
 }
 
-.hero-author {
+.form-title, .hero-author {
   font-family: "Montserrat";
   font-weight: 500;
   line-height: 100%;
@@ -996,7 +996,7 @@
   display: flex;
   max-width: 900px;
   margin: 0 auto;
-  background: #fff;
+  background: rgb(246, 247, 247);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -1004,13 +1004,133 @@
   z-index: 2;
 }
 
+.card-right {
+  position: relative;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.card-left-date {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  border-right: 1px solid rgb(46, 37, 32);
+  padding: 59px 28px 59px 0px;
+}
+
+.form-container {
+  position: relative;
+  z-index: 2;
+  max-width: 300px;
+}
+
+.bg-image::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: url("/img/registration/donuts-bg.png") no-repeat right center;
+  background-size: cover;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: url("/img/registration/donuts-bg-wave.png") no-repeat right center;
+  background-size: cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-right {
+  position: relative;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  overflow: hidden;
+  max-height: 246px;
+}
+
+.form-container {
+  position: relative;
+  z-index: 3;
+  max-width: 300px;
+  max-height: 246px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.registration-button {
+  background-color: rgb(243, 132, 140);
+  border-radius: 25px;
+  color: #F6F7F7;
+  box-shadow: 10px 15px 25px 0px rgba(232, 183, 183, 0.45);
+  border: 1px solid transparent;
+  width: 145px;
+  height: 40px;
+}
+.registration-button:hover {
+  border: 1px solid rgb(243, 132, 140);
+  background-color: #F6F7F7;
+  color: rgb(243, 132, 140);
+}
+.registration-button:focus {
+  background-color: rgb(243, 132, 140);
+  color: #F6F7F7;
+  border: 1px solid transparent;
+  box-shadow: 10px 15px 25px 0px rgba(232, 183, 183, 0.45), inset 0px 4px 4px 0px rgba(107, 66, 66, 0.25);
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: url("/img/registration/donuts-bg.png") no-repeat right center;
+  background-size: cover;
+  z-index: 1;
+  pointer-events: none;
+  max-height: 246px;
+}
+
+.bg-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/registration/donuts-bg-wave.png") no-repeat right center;
+  background-size: cover;
+  z-index: 2;
+  pointer-events: none;
+  max-height: 246px;
+}
+
 .card-left {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 40px 0px 40px 40px;
+  max-height: 246px;
 }
 
 .card-left img {
@@ -1029,27 +1149,24 @@
   position: relative;
 }
 
-.form-container {
-  background: #fff;
-  padding: 40px;
-  z-index: 2;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-}
-
 .form-container h3 {
   font-size: 16px;
   text-align: left;
   margin-bottom: 20px;
 }
 
+.form-list {
+  gap: 16px;
+}
+
 .form-container input {
   display: block;
-  width: 100%;
+  max-width: 238px;
   border: none;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+  border-bottom: 1px solid rgb(46, 37, 32);
   margin-bottom: 15px;
+  background-color: rgb(246, 247, 247);
+  font-size: 16px;
 }
 
 .form-container button {
@@ -1059,18 +1176,6 @@
   padding: 10px 25px;
   border-radius: 30px;
   cursor: pointer;
-}
-
-.bg-image {
-  background: url("/img/registration/donuts-bg.png") center/cover no-repeat;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 1;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
 }
 
 @media (max-width: 992px) {
