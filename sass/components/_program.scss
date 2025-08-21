@@ -33,7 +33,7 @@
     }
     &-section
     {
-        gap: 215px;
+        gap: clamp(40px,calc(40px + (180 - 40) * ((100vw - 1020px) / (1920 - 1020))),180px);
         display: flex;
         align-items: center;
         height: 750px;
@@ -92,7 +92,7 @@
         &-section
         {
             align-items: center;
-            gap: 200px;
+            gap: clamp(70px, calc(70px + (130 * (100vw - 768px) / (1920 - 768))), 200px);
         }
         &_img-first
         {
@@ -125,7 +125,7 @@
         }
     }
 }
-@media (max-width: 768px)
+@media (max-width: 850px)
 {
 
     .program

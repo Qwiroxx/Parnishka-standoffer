@@ -98,6 +98,34 @@ footer {
   right: -50px;
 }
 
+.footer-number,
+.footer-location {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.footer-number::before,
+.footer-location::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 13px;
+  height: 12.67px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.footer-number::before {
+  background-image: url("/img/footer/footer-number.svg");
+}
+
+.footer-location::before {
+  background-image: url("/img/footer/footer-loc.svg");
+}
+
 @media (max-width: 992px) {
   .contact-section {
     padding: 40px 15px;

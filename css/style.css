@@ -832,7 +832,7 @@
   display: flex;
 }
 .program-section {
-  gap: 215px;
+  gap: clamp(40px, 40px + 140 * (100vw - 1020px) / 900, 180px);
   display: flex;
   align-items: center;
   height: 750px;
@@ -885,7 +885,7 @@
 @media (max-width: 1024px) {
   .program-section {
     align-items: center;
-    gap: 200px;
+    gap: clamp(70px, 70px + 130 * (100vw - 768px) / 1152, 200px);
   }
   .program_img-first {
     position: static;
@@ -921,7 +921,7 @@
     font-size: 18px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .program-section {
     flex-direction: column;
     gap: 0;
@@ -1177,71 +1177,76 @@
   cursor: pointer;
 }
 
-@media (max-width: 992px) {
-  .registration h2 {
-    font-size: 22px;
-  }
-  .card-left img {
-    width: 100px;
-  }
-  .card-left .date {
-    font-size: 14px;
-  }
-  .form-container {
-    padding: 30px;
-  }
-  .form-container h3 {
-    font-size: 15px;
-  }
-}
 @media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-    max-width: 95%;
+  .registration-button {
+    margin-left: 54px;
   }
   .card-left {
-    padding: 30px 20px;
+    flex-direction: column-reverse;
+    gap: 8px;
   }
-  .card-left img {
-    width: 90px;
-    margin-bottom: 15px;
+  .card-left-date {
+    padding: 0;
+    border: none;
   }
-  .form-container {
-    border-radius: 0;
-    padding: 25px 20px;
-  }
-  .bg-image {
-    display: none;
-  }
-  .registration h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
+  .card-left {
+    border-right: 1px solid rgb(46, 37, 32);
+    padding: 0;
+    margin-top: 55px;
+    height: 154px;
   }
 }
-@media (max-width: 480px) {
-  .registration h2 {
-    font-size: 18px;
-  }
-  .card-left img {
-    width: 70px;
-  }
-  .card-left .date {
-    font-size: 13px;
-  }
-  .form-container h3 {
-    font-size: 14px;
+@media (max-width: 600px) {
+  .form-container {
+    flex-direction: column;
   }
   .form-container input {
-    font-size: 14px;
-    padding: 8px 0;
+    background: none;
+    color: #F6F7F7;
+    border-bottom: 1px solid #F6F7F7;
+    width: 264px;
+  }
+  .form-container input::-moz-placeholder {
+    color: #F6F7F7;
+  }
+  .form-container input::placeholder {
+    color: #F6F7F7;
   }
   .form-container button {
-    padding: 8px 20px;
-    font-size: 14px;
+    margin-bottom: 32px;
   }
-  .registration_container::before,
-  .registration_container::after {
+  .bg-image {
+    background: none;
+  }
+  .bg-image::after {
     display: none;
+  }
+  .card {
+    flex-direction: column;
+    margin: 0px 20px;
+    background: linear-gradient(rgba(61, 44, 44, 0.5), rgba(61, 44, 44, 0.5)), url("/img/registration/donuts-bg.png") no-repeat right center;
+    background-size: cover;
+    color: #F6F7F7;
+    display: flex;
+    align-items: center;
+  }
+  .card-right {
+    position: static;
+  }
+  .card-left-photo {
+    display: none;
+  }
+  .registration-button {
+    margin: 0;
+  }
+  .card-left-date {
+    text-align: center;
+    padding: 0px 60px 20px 60px;
+    border-bottom: 1px solid #F6F7F7;
+    margin-bottom: 20px;
+  }
+  .form-container h3 {
+    text-align: center;
   }
 }
 .reviews_section {
@@ -1424,6 +1429,13 @@
 @media (max-width: 480px) {
   .reviews {
     font-size: 20px;
+  }
+  .box-elisabeth, .box-john {
+    display: none;
+  }
+  .review-container .review:nth-child(2) img {
+    width: 280px;
+    height: 280px;
   }
   .review img {
     width: 110px;
@@ -1646,6 +1658,34 @@ footer {
   height: 150px;
   top: 100px;
   right: -50px;
+}
+
+.footer-number,
+.footer-location {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.footer-number::before,
+.footer-location::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 13px;
+  height: 12.67px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.footer-number::before {
+  background-image: url("/img/footer/footer-number.svg");
+}
+
+.footer-location::before {
+  background-image: url("/img/footer/footer-loc.svg");
 }
 
 @media (max-width: 992px) {

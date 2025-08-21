@@ -190,7 +190,13 @@
   .reviews {
     font-size: 20px;
   }
-
+  .box-elisabeth, .box-john {
+    display: none;
+  }
+  .review-container .review:nth-child(2) img {
+    width: 280px;
+    height: 280px;
+  }
   .review img {
     width: 110px;
     height: 110px;
