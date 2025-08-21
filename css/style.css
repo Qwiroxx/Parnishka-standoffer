@@ -1354,38 +1354,36 @@
   background-color: #d9627b;
 }
 
-.circle {
+.decor-circle {
   position: absolute;
   border-radius: 50%;
   z-index: 0;
-  opacity: 0.1;
+  opacity: 0.2;
+  background: transparent;
 }
 
-.circle1 {
+.decor-circle-left {
   width: 80px;
   height: 80px;
   left: 50px;
   top: 100px;
-  border: 10px solid #f0f0f0;
-  background: transparent;
+  border: 20px solid #999;
 }
 
-.circle2 {
+.decor-circle-right {
   width: 100px;
   height: 100px;
   right: 40px;
   top: 100px;
-  border: 10px solid #ff9999;
-  background: transparent;
+  border: 15px solid #ff9999;
 }
 
-.circle3 {
+.decor-circle-center {
   width: 60px;
   height: 60px;
   left: 48%;
-  top: 350px;
-  border: 8px solid #999;
-  background: transparent;
+  top: 540px;
+  border: 10px solid #999;
 }
 
 @media (max-width: 992px) {
