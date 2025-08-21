@@ -5,7 +5,7 @@
   position: relative;
   color: #333;
   overflow-x: hidden;
-    font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .reviews {
@@ -13,7 +13,6 @@
   margin-top: 50px;
   position: relative;
   z-index: 1;
-  font-family: Montserrat Alternates;
   font-weight: 500;
   font-style: Medium;
   line-height: 100%;
@@ -43,6 +42,21 @@
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.review-container .review:nth-child(2) img {
+  width: 320px;
+  height: 320px;
+}
+
+.review-container .review:nth-child(2) .name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.review-container .review:nth-child(2) .stars {
+  font-size: 20px;
 }
 
 .name {
@@ -94,7 +108,7 @@
   background-color: #d9627b;
 }
 
-/* Кружки */
+
 .circle {
   position: absolute;
   border-radius: 50%;
